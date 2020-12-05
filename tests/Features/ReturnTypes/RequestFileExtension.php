@@ -9,13 +9,13 @@ use Illuminate\Http\UploadedFile;
 
 class RequestFileExtension
 {
-    public function testRequestFileStore()
+    public function testRequestFileStore() : void
     {
         $request = new Request();
         $request->file('image', new UploadedFile('', ''))->store('/path');
     }
 
-    public function testRequestFileArrayStore()
+    public function testRequestFileArrayStore() : void
     {
         $request = new Request();
         $request->file()[0]->store('/path');
